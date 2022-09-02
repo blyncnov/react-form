@@ -1,0 +1,127 @@
+.react-form-section {
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 100vh;
+  background-color: pink;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url("../../assets/galaxy.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2em 0;
+  overflow-y: scroll;
+  align-items: center;
+
+  .react-form-container {
+    padding: 0;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    height: auto;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: rgba(163, 161, 161, 0.2) 0px 5px 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .react-form-divider {
+      padding: 1em;
+      color: white;
+
+      .welcome-text {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        h1 {
+          text-shadow: #333;
+
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../../assets/stars.jpeg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        mix-blend-mode: darken;
+      }
+
+      &:nth-child(2) {
+        background-color: #ffffff;
+        color: black !important;
+        border: 1px solid rgba(51, 51, 51, 0.753);
+        border-radius: 0 0 3px 3px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+      url("../../assets/galaxy.jpeg");
+  }
+}
+
+#form {
+  .form-input {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0 0 0;
+    gap: 0.2em;
+
+    form:invalid {
+      border: 1px solid #ffdddd;
+    }
+
+    // input:required ::grammar-error {
+    //   border-color: #c00000;
+    // }
+
+    label {
+      color: #333;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 1.5em;
+      border: 1px solid #eee;
+      border-radius: 2px;
+    }
+
+    button {
+      width: 100%;
+      padding: 1em 1.5em;
+      outline: none;
+      border: none;
+      background-color: #000126;
+      color: white;
+      border-radius: 2px;
+      font-weight: bold;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../../assets/galaxy.jpeg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+      cursor: pointer;
+    }
+  }
+}
